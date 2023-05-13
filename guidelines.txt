@@ -1,0 +1,43 @@
+1. Describe components (functional and class-based)
+
+2. Create components
+
+3. React Folder Structure
+
+4. Import Components (es6 modules)
+
+5. Declare Components with props
+
+6. Style with JSX
+
+7. Save and reuse styles
+
+8. Embed in attributes
+
+9. Identify event types
+
+10. Use React Event Handlers
+
+11. Event handling syntax (CamelCase)
+
+12. User triggered events
+
+13. Data-flow
+
+14. State in React
+
+15. Use Hooks
+
+16. Describe stateful and stateless Components
+
+17. Identify website navigation types (simple/complex)
+
+18. Create basic navigation route
+
+19. Use and Explain Conditional Rendering
+
+20. Assets
+
+21. Use Embedded Assets
+
+22. Use video and audio assets (react-player npm package)
