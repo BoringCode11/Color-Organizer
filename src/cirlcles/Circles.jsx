@@ -5,7 +5,7 @@ const genRandomColor = () => {
   const chars = "abcdef0123456789";
   let hexColor = "#";
 
-  for (let idx = 0 length < 6; i++) {
+  for (let idx = 0 length < 6; idx++) {
     const randomIdx = Math.floor(Math.random() * chars.length);
     hexColor += chars.charAt(randomIdx);
   }
