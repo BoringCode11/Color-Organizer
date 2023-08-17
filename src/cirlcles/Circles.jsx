@@ -5,11 +5,10 @@ const genRandomColor = () => {
   const chars = "abcdef0123456789";
   let hexColor = "#";
 
-  while (hexColor.length <= 6) {
+  for (let idx = 0 length < 6; i++) {
     const randomIdx = Math.floor(Math.random() * chars.length);
     hexColor += chars.charAt(randomIdx);
   }
-
   return hexColor;
 }
 
@@ -29,7 +28,8 @@ const Circles = () => {
   const handleUndo = () => {
     const circlesCpy = [...circles];
 
-    if (circlesCpy.length < 1) { return };
+    if (circlesCpy.length < 1) 
+      return;
 
     const removedCirle = circlesCpy.pop();
     setCircles(circlesCpy);
@@ -39,7 +39,8 @@ const Circles = () => {
   const handleRedo = () => {
     const circlesCpy = [...removedCircles];
 
-    if (circlesCpy.length < 1) { return };
+    if (circlesCpy.length < 1)  
+      return;
 
     const removedCircle = circlesCpy.pop();
     setRemovedCircles(circlesCpy);
@@ -47,12 +48,12 @@ const Circles = () => {
   }
 
   return (
-    <div>
+    <>
       <div onClick={handleCreateCircle} className='app'>
-        {circles.map(circle => {
+        {circles.map((circle, idx) => {
           const { pageX, pageY, color } = circle;
-
-          return <div className='circle' style={{ top: pageY - 20, left: pageX - 20, background: color }}></div>;
+          const circleStyle = { top: pageY - 20, left: pageX - 20, background: color };
+          return <div key={idx} className='circle' style={circleStyle}></div>;
         })}
       </div>
 
@@ -61,7 +62,7 @@ const Circles = () => {
         <button onClick={handleUndo} className='btn'>undo</button>
         <button onClick={handleRedo} className='btn'>redo</button>
       </div>
-    </div>
+    </>
   );
 }
 
